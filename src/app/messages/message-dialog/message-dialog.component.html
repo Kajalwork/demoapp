@@ -1,0 +1,27 @@
+<h2 mat-dialog-title class="dialog-header">
+  Create Message
+  <button mat-icon-button class="close-btn" (click)="closeDialog()">
+    <mat-icon>close</mat-icon>
+  </button>
+</h2>
+
+<mat-dialog-content [formGroup]="messageForm" class="dialog-content">
+  <mat-form-field appearance="outline">
+    <mat-label>Email</mat-label>
+    <input matInput formControlName="email" type="email" required>
+    <mat-error *ngIf="messageForm.controls.email.invalid">Valid email required</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Message</mat-label>
+    <textarea matInput formControlName="message" rows="3" required></textarea>
+    <mat-error *ngIf="messageForm.controls.message.invalid">Message required</mat-error>
+  </mat-form-field>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end" class="dialog-actions">
+  <button mat-button class="cancel-btn" (click)="closeDialog()">Cancel</button>
+  <button mat-raised-button color="primary" class="submit-btn" (click)="submit()" [disabled]="messageForm.invalid">
+    Submit
+  </button>
+</mat-dialog-actions>

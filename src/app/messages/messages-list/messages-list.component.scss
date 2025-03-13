@@ -1,0 +1,26 @@
+.open-message-btn {
+  margin-top: 5px;
+  background: #7e57c2 !important; /* Soft purple */
+  color: white !important;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 12px 15px;
+  border-radius: 20px;
+  border: none;
+  transition: all 0.3s ease-in-out;
+  justify-content: flex-end;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+}
+.message-container {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 5px;
+}
+.open-message-btn:hover {
+  background: #9575cd !important; /* Lighter purple on hover */
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.open-message-btn:active {
+  transform: scale(0.97);
+}

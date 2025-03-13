@@ -1,0 +1,89 @@
+// :root {
+//   --primary-color: #9d4edd;  /* Soft Lavender */
+//   --secondary-color: #ffb4a2; /* Warm Peach */
+//   --background-color: #f8edeb; /* Light Pastel Pink */
+//   --text-color: #3d405b;  /* Dark Gray-Blue */
+//   --button-hover: #ffc8dd; /* Soft Pink */
+//   --input-bg: #fff; /* Pure White for fields */
+// }
+
+.dialog-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 16px;
+  background: var(--primary-color);
+  color: white;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.close-btn {
+  color: white;
+  transition: transform 0.2s ease-in-out;
+}
+
+.close-btn:hover {
+  transform: scale(1.2);
+}
+
+.dialog-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: var(--background-color);
+  border-radius: 0 0 12px 12px;
+  padding-top: 5px !important;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+mat-form-field .mat-input-element {
+  background: var(--input-bg);
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding: 16px;
+  background: var(--background-color);
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.cancel-btn {
+  color: var(--text-color);
+  background: transparent;
+  border-radius: 8px;
+  padding: 8px 16px;
+  transition: background 0.3s;
+}
+
+.cancel-btn:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.submit-btn {
+  border-radius: 20px;
+  padding: 8px 24px;
+  font-weight: bold;
+  background: var(--secondary-color);
+  color: white;
+  transition: background 0.3s;
+}
+
+.submit-btn:disabled {
+  background: #ddd;
+  color: #777;
+}
+
+.submit-btn:hover {
+  background: var(--button-hover);
+}
